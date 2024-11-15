@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generate QR Code</h1>
+    <form id="qrForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+      
+      <label for="sex">Sex:</label>
+      <select id="sex" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      
+      <label for="rollno">Roll No:</label>
+      <input type="text" id="rollno" required>
+      
+      <button type="button" onclick="generateQRCode()">Generate QR Code</button>
+    </form>
+    
+    <!-- QR code container with overlay for name -->
+    <div id="qr-container">
+      <div id="qrcode"></div>
+      <div id="qr-text"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
